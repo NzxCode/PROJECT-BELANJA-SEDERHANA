@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NicoShop V2 (Object)</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        ul { background: #f0f0f0; padding: 20px; width: 400px; } 
+        li { margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+        input { padding: 5px; margin-right: 5px; }
+    </style>
+</head>
+<body>
+
+    <h2>🛒 NicoShop</h2>
+    
+    <input type="text" id="inputNama" placeholder="Nama Barang (ex: Topi)">
+    <input type="number" id="inputHarga" placeholder="Harga (ex: 50000)">
+    
+    <button onclick="tambahBarang()">Tambah</button>
+
+    <hr>
+    
+    <h3>Total Item: <span id="totalText">0</span></h3>
+    
+    <p>Daftar Belanjaan:</p>
+    <ul id="listKeranjang"></ul>
+
+<script src="Keranjang_Belanja.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Penghitung Diskon</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        input, button { padding: 10px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <h2>🏷️ Cek Harga Diskon</h2>
+    
+    <p>Masukkan Harga Barang:</p>
+    <input type="number" id="inputHarga" placeholder="Contoh: 250000">
+    
+    <br>
+    <button onclick="cekDiskon()">Hitung Diskon</button>
+
+    <h3 id="hasilText">Hasil: Harap Sabar Menunggu...</h3>
+
+    <script>
+        function cekDiskon() {
+            let hargaAsli = document.getElementById("inputHarga").value;
+
+            let hargaAkhir = 0;
+            let pesan = "";
+
+            if (hargaAsli == "" || hargaAsli == 0) {
+                pesan = "HARAP MASUKKAN HARGA YANG VALID!";
+            } else if (hargaAsli >= 100000) {
+                let potongan = hargaAsli * 0.5;
+                hargaAkhir = hargaAsli - potongan;
+                pesan = "HARGA SETELAH DISKON 50% ADALAH : Rp " + hargaAkhir;
+            } else {
+                pesan = "AYO TAMBAH LAGI BELANJAANYA!";
+            }
+            document.getElementById("hasilText").innerText = pesan;
+        }
+    </script>
+
+</body>
+</html>
